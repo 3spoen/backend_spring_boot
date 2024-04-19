@@ -1,7 +1,7 @@
 package de.spoen.backend_spring_boot.service;
 
-import de.spoen.backend_spring_boot.model.Student;
-import de.spoen.backend_spring_boot.repo.StudentRepo;
+import de.spoen.backend_spring_boot.model.Chatlogs;
+import de.spoen.backend_spring_boot.repo.ChatRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,19 +9,19 @@ import java.util.List;
 
 
 @Service
-public class StudentServiceImp implements StudentService {
+public class ChatServiceImp implements ChatService {
 
     @Autowired
-    private StudentRepo studentRepo;
+    private ChatRepo studentRepo;
 
 
     @Override
-    public Student saveStudent(Student student) {
+    public Chatlogs saveStudent(Chatlogs student) {
         return studentRepo.save(student);
     }
 
     @Override
-    public List<Student> getAllStudents() {
+    public List<Chatlogs> getAllStudents() {
         return studentRepo.findAll();
     }
 }
