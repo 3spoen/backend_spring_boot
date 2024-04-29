@@ -12,16 +12,16 @@ import java.util.List;
 public class ChatServiceImp implements ChatService {
 
     @Autowired
-    private ChatRepo studentRepo;
+    private ChatRepo chatRepo;
 
 
     @Override
-    public Chatlogs saveStudent(Chatlogs student) {
-        return studentRepo.save(student);
+    public Chatlogs saveChat(Chatlogs student) {
+        return chatRepo.save(student);
     }
 
     @Override
-    public List<Chatlogs> getAllStudents() {
-        return studentRepo.findAll();
+    public List<Chatlogs> getAllChat() {
+        return chatRepo.findAll();
     }
 }

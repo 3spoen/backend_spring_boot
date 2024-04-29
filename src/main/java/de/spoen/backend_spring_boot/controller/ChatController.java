@@ -14,21 +14,21 @@ import java.util.List;
 @RequestMapping("/chat")
 public class ChatController {
     @Autowired
-    private ChatService studentService;
+    private ChatService chatService;
     @Autowired
     private ApplicationUsersRepo usersRepo;
     @Autowired
     private PasswordEncoder passwordEncoder;
 
     @PostMapping("/add")
-    public  String add(@RequestBody Chatlogs student) {
-        studentService.saveStudent(student);
-        return "New Student added";
+    public  String add(@RequestBody Chatlogs chatlogs) {
+        chatService.saveChat(chatlogs);
+        return "New chatlogs added";
     }
 
     @GetMapping("/getall")
     public List<Chatlogs> getall(){
-        return studentService.getAllStudents();
+        return chatService.getAllChat();
     }
 
     @PostMapping("/registration/user")

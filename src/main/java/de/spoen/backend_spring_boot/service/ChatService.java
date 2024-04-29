@@ -5,6 +5,6 @@ import de.spoen.backend_spring_boot.model.Chatlogs;
 import java.util.List;
 
 public interface ChatService {
-    public Chatlogs saveStudent(Chatlogs student);
-    public List<Chatlogs> getAllStudents();
+    public Chatlogs saveChat(Chatlogs chat);
+    public List<Chatlogs> getAllChat();
 }
